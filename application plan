@@ -1,0 +1,19 @@
+Goal is to pick up the basics of OracleSQL and VBscript and apply it to an industrial context.
+
+Simple Inventory Intake Application
+Purpose: Record incoming products to keep a record of stock.
+How:
+
+Application needs three main pieces:
+    Front-end for the users to record incoming products.
+    Back-end that handles the database, should be able to create the entire application business logic in just OracleSQL by using edge functions and RLS (hopefully those are supported)
+    Test suite to ensure the application works as intended and doesn't have unintended behavior in edge cases.
+
+I'll make the front end in windows forms because it'd take too long to create the gui with a js framework.
+The backend will be in OracleSQL, I'll have three tables: products for product information; suppliers for information about the suppliers; and inventory for information about current stock levels.
+The test suite will be in VBScript.
+
+The order I'll implement the project:
+First I'll setup the oracle sql database and design the schemas as well as the functions. I'll create a test plan for the functions and create the first suite of tests which will verify the functions work as intended and fail fast instead of having unintended behaviors.
+My next step is making a windows form that will pass the inputs to the database. Then I'll create another test plan specifically to ensure the ui functions visually as well as has the intended effect on the backend.
+The final stage is automating the test suite and using an infrastructure as code toolkit to make deployment easier and less prone to mistakes.
